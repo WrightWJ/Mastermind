@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <CommunicationClass name="project1.PegTest" x="13" y="12"/>
+    <CommunicationClass name="project1.Peg" x="19" y="70"/>
+    <CommunicationClass name="project1.SequenceTest" x="124" y="13">
+        <Association destinationClassName="project1.Sequence"
+            endpointName="seq1" kind="Simple"/>
+    </CommunicationClass>
+    <CommunicationClass name="project1.Board" x="146" y="129">
+        <Association destinationClassName="project1.Sequence"
+            endpointName="gameSeq" kind="Simple"/>
+        <Communication destinationClassName="project1.Sequence"/>
+    </CommunicationClass>
+    <CommunicationClass name="project1.MasterMindMain" x="10" y="130">
+        <Communication destinationClassName="project1.Board"/>
+    </CommunicationClass>
+    <CommunicationClass name="project1.Sequence" x="134" y="69">
+        <Association destinationClassName="project1.Peg"
+            endpointName="aList" kind="Simple"/>
+        <Communication destinationClassName="project1.Peg"/>
+    </CommunicationClass>
+</ClassDiagram>
